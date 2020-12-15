@@ -1,0 +1,106 @@
+.positionSticky {
+  background-color: rgba(255, 253, 253, 0.74);
+  border: 0.2px solid rgba(204, 201, 197, 0.671);
+  transition: all 0.3s linear;
+  &:hover {
+    box-shadow: rgb(235, 228, 222) 0px 5px 15px, inset rgb(252, 252, 252) 0px -10px 20px;
+  }
+  .point {
+    color: rgb(107, 45, 4);
+  }
+}
+.main-header {
+  font-family: "EB Garamond", serif;
+  // justify-content: space-between;
+  position: fixed;
+  -webkit-tap-highlight-color: rgba(158, 156, 156, 0);
+  overflow: hidden;
+  padding-bottom: 0px;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  color: rgb(107, 45, 4);
+  margin: 0px;
+  padding: 5px 0px;
+  padding-top: 20px;
+  // background-color: blanchedalmond;
+  .main-title {
+    // margin: 1% 2%;
+    margin: 0.1px;
+    font-size: 1.6em;
+    background-color: transparent;
+    color: rgb(248, 104, 20);
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .main-points {
+    padding: 0.8vw 5vw;
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    color: white;
+    margin: 0px;
+
+    // transition-duration: 5s;
+    // transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    .icon {
+      display: none;
+    }
+    .point {
+      font-size: 1.1em;
+      // margin: 0px 1.4vw ;
+      cursor: pointer;
+
+      list-style: none;
+      &:hover {
+        text-decoration: underline;
+        // color: rgb(74, 74, 228);
+      }
+      & a{
+        text-decoration: none !important;
+        color: rgb(189, 108, 15);
+      }
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .main-points li:not(:first-child) {
+    display: none;
+
+  }
+  .main-points li.icon {
+    display: block !important;
+    float: right !important;
+    position: relative;
+    bottom: 5px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .main-points.responsive {
+    position: relative;
+    background-color: rgba(252, 250, 250, 0.822);
+    color: black;
+    display: grid;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0px 24px;
+  }
+  .responsive li:not(:last-child) {
+    float: none;
+    display: block;
+
+    padding: 3px 0px;
+  }
+  .fade li:not(:last-child) {
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    opacity: 0;
+  }
+  .fade li.show {
+    opacity: 1;
+  }
+}
