@@ -1,3 +1,7 @@
+<img src="/public/screenshots/1.png" alt="image" />
+<img src="/public/screenshots/2.png" alt="image" />
+<img src="/public/screenshots/3.png" alt="image" />
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
